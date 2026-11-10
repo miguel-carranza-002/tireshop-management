@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env
+.env.*
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+
+# Supplier catalog files: not committed (supplier data, may be large).
+data/imports/*.csv
+data/imports/pdfs/
+
+# Logs, database dumps and git history backups
+*.log
+*.dump
+*.bundle
+*.sql.gz
+
+# Editor and local tool settings
+.vscode/
+.idea/
+.claude/

@@ -1,0 +1,38 @@
+{
+  "name": "tireshop-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "API for a tire shop management app: quotes, work orders, invoices, inventory and tire comparison",
+  "main": "index.js",
+  "scripts": {
+    "test": "DB_NAME=tireshop_test tsx src/scripts/resetTestDb.ts && DB_NAME=tireshop_test node --import tsx --test --test-concurrency=1 test/*.test.ts",
+    "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "tsx src/scripts/migrate.ts",
+    "check-db": "tsx src/scripts/checkDb.ts",
+    "admin-password": "tsx src/scripts/adminPassword.ts",
+    "import-tires": "tsx src/scripts/importTires.ts",
+    "sample-stock": "tsx src/scripts/sampleStock.ts",
+    "demo-data": "tsx src/scripts/demoData.ts"
+  },
+  "keywords": [],
+  "author": "Miguel",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "pdfkit": "^0.17.2",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/pdfkit": "^0.17.7",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,53 @@
+/* Orders page. */
+.od { display: flex; flex-direction: column; gap: var(--space-4); }
+.od > .ui-page-header { margin-bottom: 0; }
+.od-muted { color: var(--text-muted); font-size: var(--text-sm); }
+.od-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-strong);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.od-link:hover { text-decoration: underline; }
+.od-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-subtle);
+}
+.od-check { width: 32px; }
+.od-item { color: var(--text-strong); font-weight: 500; }
+.od-tags { display: inline-flex; gap: var(--space-1); margin-left: var(--space-2); vertical-align: middle; }
+.od-late { color: var(--danger-strong); font-weight: 500; }
+.od-actions { white-space: nowrap; text-align: right; }
+.od-actions .ui-btn + .ui-btn { margin-left: var(--space-1); }
+.od-danger { color: var(--danger-strong); }
+
+/* Call customers */
+.od-calls { display: flex; flex-direction: column; gap: var(--space-3); margin: 0; padding: var(--space-4); list-style: none; }
+.od-call {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.od-call-ready { border-color: var(--success-border); background: var(--success-subtle); }
+.od-call-head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-3); }
+.od-call-name { color: var(--text-strong); font-size: var(--text-md); font-weight: 600; }
+.od-phone { margin-left: var(--space-2); color: var(--accent-strong); font-weight: 500; text-decoration: none; }
+.od-call-items,
+.od-call-log { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; font-size: var(--text-base); }
+.od-call-log { padding-left: var(--space-3); border-left: 2px solid var(--border); font-size: var(--text-sm); }
+.od-call-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+@media (max-width: 560px) {
+  .od-call-head { flex-direction: column; }
+  .od-actions { white-space: normal; }
+}

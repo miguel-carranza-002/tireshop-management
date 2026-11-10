@@ -1,0 +1,66 @@
+/* Quotes & work orders list and the New quote dialog. */
+.qp-row { cursor: pointer; }
+.qp-number {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-strong);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.qp-number:hover { text-decoration: underline; }
+.qp-status { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.ui-panel > .ui-panel-body-flush > .ui-alert { margin: var(--space-3) var(--space-4); }
+
+/* Customer picker */
+.qp-picker {
+  max-height: 260px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  list-style: none;
+}
+.qp-picker li + li { border-top: 1px solid var(--border); }
+.qp-picker button {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  background: none;
+  color: var(--text-strong);
+  font-size: var(--text-base);
+  text-align: left;
+  cursor: pointer;
+}
+.qp-picker button:hover { background: var(--surface-subtle); }
+.qp-picker strong { font-weight: 500; }
+.qp-picker-empty { padding: var(--space-3); color: var(--text-muted); font-size: var(--text-base); }
+.qp-picked {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-subtle);
+  font-size: var(--text-base);
+}
+.qp-vehicles { display: flex; flex-direction: column; gap: var(--space-2); margin: 0; padding: 0; border: none; }
+.qp-vehicle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+.qp-vehicle-on { border-color: var(--accent); background: var(--accent-subtle); }
+
+.qp-section-head { display: flex; justify-content: space-between; align-items: center; gap: var(--space-2); }

@@ -1,0 +1,83 @@
+/* Inventory page. */
+.iv-muted { margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
+.iv-warn { color: var(--warning-strong); font-weight: 500; }
+.iv-error { color: var(--danger-strong); font-size: var(--text-sm); }
+.iv-add { margin-bottom: var(--space-4); }
+.iv-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+.iv-search {
+  flex: 1 1 260px;
+  max-width: 420px;
+  height: var(--control-height);
+  padding: 0 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  font-size: var(--text-base);
+}
+.iv-segmented { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius); overflow: hidden; }
+.iv-seg {
+  height: 30px;
+  padding: 0 var(--space-3);
+  border: none;
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+.iv-seg + .iv-seg { border-left: 1px solid var(--border-strong); }
+.iv-seg-on { background: var(--accent-subtle); color: var(--accent-text); font-weight: 500; }
+.iv-name { color: var(--text-strong); font-weight: 500; }
+.iv-tags { display: inline-flex; gap: var(--space-1); margin-left: var(--space-2); vertical-align: middle; }
+.iv-actions { white-space: nowrap; text-align: right; }
+.iv-row-open td { background: var(--surface-subtle); }
+.iv-detail td { padding: var(--space-3) var(--space-4) var(--space-4); background: var(--surface-subtle); }
+.iv-detail .pf { padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+
+/* Inline cost / stock forms */
+.iv-inline { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.iv-input {
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: var(--text-base);
+}
+.iv-qty { width: 72px; }
+.iv-money { width: 100px; }
+.iv-grow { flex: 1 1 200px; max-width: 360px; }
+.iv-full { flex-basis: 100%; }
+.iv-history { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; font-size: var(--text-base); }
+.iv-plus { color: var(--success-strong); }
+.iv-minus { color: var(--danger-strong); }
+
+/* Tire lines tab */
+.tl-thumb-cell { width: 56px; }
+.tl-thumb { display: block; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: var(--radius); object-fit: cover; background: var(--surface-subtle); }
+.tl-thumb-empty { background: repeating-linear-gradient(45deg, var(--surface-subtle), var(--surface-subtle) 4px, var(--surface-muted) 4px, var(--surface-muted) 8px); }
+.tl-badges { display: inline-flex; flex-wrap: wrap; gap: var(--space-1); }
+.tl-photo-row { display: flex; gap: var(--space-4); align-items: flex-start; }
+.tl-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+.tl-photo img { width: 100%; height: 100%; object-fit: cover; }
+.tl-photo-actions { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+.tl-photo-actions label.ui-btn { cursor: pointer; }
+.tl-checks { flex-direction: row; flex-wrap: wrap; gap: var(--space-4); }

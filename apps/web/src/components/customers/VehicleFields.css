@@ -1,0 +1,53 @@
+.vf { display: flex; flex-direction: column; gap: var(--space-4); }
+.vf-muted { margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
+.vf-vin { display: flex; gap: var(--space-2); }
+.vf-vin input { flex: 1; text-transform: uppercase; }
+.vf-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  font-size: var(--text-base);
+}
+.vf-checks label { display: inline-flex; align-items: center; gap: 6px; color: var(--text); }
+.vf-special {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.vf-special legend { padding: 0 var(--space-1); color: var(--text-strong); font-size: var(--text-base); font-weight: 600; }
+.vf-required { margin-top: var(--space-1); }
+
+/* Decode VIN suggestions */
+.vf-suggest {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  background: var(--accent-subtle);
+}
+.vf-suggest-title { margin: 0; color: var(--accent-text); font-size: var(--text-base); font-weight: 600; }
+.vf-fills { display: flex; flex-direction: column; gap: var(--space-1); margin: 0; padding: 0; list-style: none; font-size: var(--text-base); }
+.vf-fills label { display: inline-flex; align-items: center; gap: 6px; }
+.vf-suggest-actions { display: flex; justify-content: flex-end; gap: var(--space-2); }
+
+/* Vehicle form on the Customers page */
+.vf-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.vf-form-title { margin: 0; color: var(--text-strong); font-size: var(--text-md); font-weight: 600; }
+.vf-form-actions { display: flex; justify-content: flex-end; gap: var(--space-2); }
+.vf-vin input::placeholder { text-transform: none; }

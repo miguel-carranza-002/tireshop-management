@@ -1,0 +1,20 @@
+brand	model	category	type	season	warranty	road_hazard	size	size_alt	service_index	Sidewall	LR/PR	tread_depth	max_load	UTQG
+Northway	Cruiser AS	Passenger	Touring	All Season	65k	TRUE	205/55R16		91H	BW	SL	10/32	1356@44	640 A A
+Northway	Cruiser AS	Passenger	Touring	All Season	65k	TRUE	215/55R16		93H	BW	SL	10/32	1433@44	640 A A
+Northway	Cruiser AS	Passenger	Touring	All Season	65k	TRUE	225/65R17		102H	BW	SL	10/32	1874@44	640 A A
+Northway	Cruiser AS	Passenger	Touring	All Season	65k	TRUE	215/60R16		95H	BW	SL	10/32	1521@44	640 A A
+Northway	Sprint GT	Passenger	Performance	All Season	45k	TRUE	215/55R16		97V	BW	XL	10/32	1609@51	500 A A
+Northway	Sprint GT	Passenger	Performance	All Season	45k	TRUE	225/45R17		94W	BW	XL	10/32	1477@51	500 A A
+Northway	Sprint GT	Passenger	Performance	All Season	45k	TRUE	235/40R18		95W	BW	XL	10/32	1521@51	500 A A
+Ridgecrest	Trail HT	Light Truck/SUV	Highway	All Season	70k	TRUE	225/65R17		102T	BW	SL	12/32	1874@44	700 A B
+Ridgecrest	Trail HT	Light Truck/SUV	Highway	All Season	70k	TRUE	235/65R17		104T	BW	SL	12/32	1984@44	700 A B
+Ridgecrest	Trail HT	Light Truck/SUV	Highway	All Season	70k	TRUE	265/70R17		115T	BW	SL	12/32	2679@44	700 A B
+Ridgecrest	Trail AT	Light Truck/SUV	All-Terrain	Snow Traction	55k	TRUE	LT245/75R16		120/116S	BW	E/10	17/32	3042@80	
+Ridgecrest	Trail AT	Light Truck/SUV	All-Terrain	Snow Traction	55k	TRUE	LT265/70R17		121/118S	BW	E/10	17/32	3195@80	
+Ridgecrest	Trail AT	Light Truck/SUV	All-Terrain	Snow Traction	55k	TRUE	LT275/65R18		123/120S	BW	E/10	17/32	3415@80	
+Velora	Comfort Plus	Passenger	Touring	All Season	50k	FALSE	205/55R16		91V	BLK	SL	10/32	1356@44	600 A B
+Velora	Comfort Plus	Passenger	Touring	All Season	50k	FALSE	215/55R16		93V	BLK	SL	10/32	1433@44	600 A B
+Velora	Comfort Plus	Passenger	Touring	All Season	50k	FALSE	215/60R16		95V	BLK	SL	10/32	1521@44	600 A B
+Velora	Comfort Plus	Passenger	Touring	All Season	50k	FALSE	225/65R17		102V	BLK	SL	10/32	1874@44	600 A B
+Velora	Winter Grip	Passenger	Performance	Snow Traction	40k	FALSE	215/55R16		97H	BW	XL	11/32	1609@50	
+Velora	Winter Grip	Passenger	Performance	Snow Traction	40k	FALSE	225/65R17		106H	BW	XL	11/32	2094@50	

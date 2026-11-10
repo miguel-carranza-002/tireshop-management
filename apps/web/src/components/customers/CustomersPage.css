@@ -1,0 +1,74 @@
+/* Customers page. */
+.cu-layout { display: grid; grid-template-columns: minmax(260px, 340px) minmax(0, 1fr); gap: var(--space-4); align-items: start; }
+.cu-detail { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.cu-detail .ui-panel + .ui-panel { margin-top: 0; }
+.cu-muted { margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
+.cu-notes { margin: 0; color: var(--text); font-size: var(--text-base); white-space: pre-wrap; }
+.cu-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-strong);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Search list */
+.cu-search { padding: var(--space-3); border-bottom: 1px solid var(--border); }
+.cu-search input {
+  width: 100%;
+  height: var(--control-height);
+  padding: 0 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  font-size: var(--text-base);
+}
+.cu-results { max-height: 70vh; margin: 0; padding: 0; overflow-y: auto; list-style: none; }
+.cu-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+.cu-row:hover { background: var(--surface-subtle); }
+.cu-row-selected,
+.cu-row-selected:hover { background: var(--accent-subtle); box-shadow: inset 3px 0 0 var(--accent); }
+.cu-row-name { display: flex; align-items: center; gap: var(--space-2); color: var(--text-strong); font-size: var(--text-base); font-weight: 500; }
+
+/* Vehicles */
+.cu-vehicles { margin: 0; padding: 0; list-style: none; }
+.cu-vehicle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+.cu-vehicle:last-child { border-bottom: none; }
+.cu-vehicle-name { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); color: var(--text-strong); font-size: var(--text-base); font-weight: 600; }
+.cu-badges { display: inline-flex; flex-wrap: wrap; gap: var(--space-1); }
+.cu-vehicle-actions { display: flex; gap: var(--space-1); }
+.cu-vehicle-form { padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--border); }
+.cu-vehicle-form .vf-form { margin: 0; }
+
+/* Customer form */
+.cu-form { display: flex; flex-direction: column; gap: var(--space-3); }
+.cu-form-title { margin: 0; color: var(--text-strong); font-size: var(--text-md); font-weight: 600; }
+.cu-check { display: inline-flex; align-items: center; gap: 6px; align-self: end; height: var(--control-height); color: var(--text); font-size: var(--text-base); }
+.cu-form-actions { display: flex; justify-content: flex-end; gap: var(--space-2); }
+
+@media (max-width: 900px) {
+  .cu-layout { grid-template-columns: minmax(0, 1fr); }
+  .cu-results { max-height: 40vh; }
+}
+@media (max-width: 560px) {
+  .cu-vehicle { flex-direction: column; align-items: flex-start; }
+}

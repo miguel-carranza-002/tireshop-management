@@ -1,0 +1,41 @@
+.pf { display: flex; flex-direction: column; gap: var(--space-4); }
+.pf-title { margin: 0; color: var(--text-strong); font-size: var(--text-md); font-weight: 600; }
+.pf-section { display: flex; flex-direction: column; gap: var(--space-2); }
+.pf-section + .pf-section { padding-top: var(--space-3); border-top: 1px solid var(--border); }
+.pf-heading { margin: 0; color: var(--text-strong); font-size: var(--text-base); font-weight: 600; }
+.pf-note { color: var(--text-muted); font-weight: 400; }
+.pf-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pf-grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: start; }
+.pf-checks { display: flex; flex-direction: column; justify-content: flex-end; gap: var(--space-1); }
+.pf-check { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-size: var(--text-base); }
+.pf-check-field { height: var(--control-height); margin-top: 22px; }
+.pf-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-strong);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.pf-actions { display: flex; justify-content: flex-end; gap: var(--space-2); }
+
+@media (max-width: 900px) {
+  .pf-grid-3,
+  .pf-grid-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .pf-grid-3,
+  .pf-grid-5 { grid-template-columns: 1fr; }
+}
+
+/* Two short inputs in one field: UTQG traction + temperature, load + psi. */
+.pf-pair {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.pf-pair > * {
+  flex: 1;
+  min-width: 0;
+}

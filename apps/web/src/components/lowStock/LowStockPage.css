@@ -1,0 +1,24 @@
+/* Low stock page. */
+.ls-muted { color: var(--text-muted); font-size: var(--text-sm); }
+.ls-warn { color: var(--danger-strong); }
+.ls-name { color: var(--text-strong); font-weight: 500; }
+.ls-check { width: 32px; }
+.ls-qty {
+  width: 64px;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  text-align: right;
+}
+.ls-actions { text-align: right; white-space: nowrap; }
+.ls-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}

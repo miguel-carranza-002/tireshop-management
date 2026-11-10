@@ -1,0 +1,18 @@
+/* Small helpers shared by every page. Everything else lives in the shared
+   components (ui.css) or in a page's own stylesheet. */
+
+/* Hidden on screen, still read by screen readers. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Numbers line up on the right. */
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

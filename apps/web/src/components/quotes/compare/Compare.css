@@ -1,0 +1,130 @@
+/* Tire comparison dialog. */
+.cmp-muted { color: var(--text-muted); font-size: var(--text-sm); }
+.cmp-controls { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--space-4); }
+.cmp-controls .ui-tabs { flex-basis: 100%; }
+.cmp-controls .ui-field { min-width: 120px; }
+.cmp-size { display: flex; gap: var(--space-2); }
+.cmp-size input { width: 160px; }
+.cmp-customer-toggle { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; padding-bottom: 6px; font-size: var(--text-base); }
+.cmp-footer-note { margin-right: auto; }
+
+.cmp-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.cmp-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.cmp-card-out { opacity: 0.6; }
+.cmp-card-head { display: flex; justify-content: space-between; align-items: center; }
+.cmp-tier {
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  color: var(--text-strong);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.cmp-tier-premium { background: var(--accent-subtle); color: var(--accent-text); }
+.cmp-include { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-size: var(--text-sm); }
+.cmp-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--surface-subtle);
+  color: var(--text-faint);
+  font-size: var(--text-sm);
+}
+.cmp-photo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.cmp-name { color: var(--text-strong); font-size: var(--text-md); }
+.cmp-specs { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); color: var(--text); font-size: var(--text-base); font-variant-numeric: tabular-nums; }
+.cmp-facts { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; color: var(--text-muted); font-size: var(--text-sm); }
+.cmp-feature-badges { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: 2px; }
+.cmp-availability { font-size: var(--text-sm); }
+.cmp-warnings {
+  margin: 0;
+  padding: var(--space-2) var(--space-2) var(--space-2) 22px;
+  border: 1px solid var(--danger-border);
+  border-radius: var(--radius);
+  background: var(--danger-subtle);
+  color: var(--danger-text);
+  font-size: var(--text-sm);
+}
+.cmp-price { margin-top: auto; padding-top: var(--space-2); border-top: 1px solid var(--border); }
+.cmp-each { color: var(--text); font-size: var(--text-base); }
+.cmp-total { color: var(--text-strong); font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.cmp-card-actions { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; }
+.cmp-swap { max-width: 180px; }
+.cmp-cost-edit { display: inline-flex; gap: var(--space-1); align-items: center; }
+.cmp-cost-edit .ed-input { width: 90px; }
+
+.cmp-section { display: flex; flex-direction: column; gap: var(--space-2); }
+.cmp-section .ui-table-wrap { border: 1px solid var(--border); border-radius: var(--radius); }
+.cmp-row-actions { white-space: nowrap; }
+.cmp-row-actions > * + * { margin-left: var(--space-1); }
+.cmp-row-warn { color: var(--danger-text); font-size: var(--text-sm); }
+
+@media (max-width: 900px) {
+  .cmp-cards { grid-template-columns: 1fr; }
+}
+.cmp-add { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius); }
+
+.cmp-last-cost {
+  white-space: nowrap;
+  font-size: var(--text-xs);
+}
+
+.cmp-add-buttons { display: inline-flex; gap: var(--space-1); }
+.cmp-pick-head { display: flex; justify-content: space-between; align-items: center; }
+.cmp-pick-search { max-width: 420px; }
+
+/* Filters: a column beside the cards that stays in view while scrolling. */
+.cmp-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: var(--space-4); align-items: start; }
+.cmp-layout-full { grid-template-columns: minmax(0, 1fr); }
+.cmp-main { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.cmp-side { position: sticky; top: 0; max-height: calc(100vh - 220px); overflow-y: auto; }
+.cmp-filters { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-subtle); }
+.cmp-filters .ui-field { min-width: 0; }
+.cmp-filters select, .cmp-filters input:not([type='checkbox']) { width: 100%; }
+.cmp-filters-head { display: flex; justify-content: space-between; align-items: center; }
+.cmp-filter-check { display: inline-flex; align-items: center; gap: 6px; font-size: var(--text-base); }
+.cmp-brand-picker { display: flex; flex-direction: column; gap: var(--space-1); }
+.cmp-brand-suggestions { margin: 0; padding: 2px; list-style: none; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+.cmp-brand-suggestions button { width: 100%; padding: 4px 8px; border: 0; background: none; color: var(--text); font: inherit; font-size: var(--text-sm); text-align: left; cursor: pointer; }
+.cmp-brand-suggestions button:hover, .cmp-brand-suggestions button:focus-visible { background: var(--accent-subtle); color: var(--accent-text); }
+.cmp-brand-tags { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.cmp-brand-tag { display: inline-flex; align-items: center; gap: 2px; padding: 2px 4px 2px 8px; border-radius: var(--radius-sm); background: var(--accent-subtle); color: var(--accent-text); font-size: var(--text-sm); font-weight: 600; }
+.cmp-brand-tag button { padding: 0 4px; border: 0; background: none; color: inherit; font-size: var(--text-md); line-height: 1; cursor: pointer; }
+@media (max-width: 900px) {
+  .cmp-layout { grid-template-columns: minmax(0, 1fr); }
+  .cmp-side { position: static; max-height: none; }
+}
+.cmp-miss { color: var(--warning-text); font-size: var(--text-sm); }
+.cmp-row-miss { color: var(--warning-text); font-size: var(--text-sm); }
+
+/* Typed request */
+.cmp-request { display: flex; flex-direction: column; gap: var(--space-1); margin-bottom: var(--space-3); }
+.cmp-request-row { display: flex; gap: var(--space-2); }
+/* Same look as a FormField input, without the label. */
+.cmp-request-row input {
+  flex: 1;
+  min-width: 0;
+  height: var(--control-height);
+  padding: 0 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-strong);
+  font-size: var(--text-base);
+}
+.cmp-request-row input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+.cmp-request p { margin: 0; }
+.cmp-request-unread { color: var(--warning-text); }
